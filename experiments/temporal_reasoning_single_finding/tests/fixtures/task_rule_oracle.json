@@ -1,0 +1,329 @@
+{
+  "schema_version": "task-rule-oracle-v1",
+  "cases": [
+    {
+      "change_labels": ["deterioration", "deterioration"],
+      "answers": {
+        "trajectory_shape": "monotonic_worsening",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T3",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["deterioration", "unchanged"],
+      "answers": {
+        "trajectory_shape": "monotonic_worsening",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T2-T3",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["deterioration", "improvement"],
+      "answers": {
+        "trajectory_shape": "single_peak",
+        "turning_regions": "peak:T2",
+        "most_severe_visit_or_plateau": "T2",
+        "first_improvement_between_visits": "T2-T3"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "deterioration"],
+      "answers": {
+        "trajectory_shape": "monotonic_worsening",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T3",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "unchanged"],
+      "answers": {
+        "trajectory_shape": "constant",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1-T3",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "improvement"],
+      "answers": {
+        "trajectory_shape": "monotonic_improvement",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1-T2",
+        "first_improvement_between_visits": "T2-T3"
+      }
+    },
+    {
+      "change_labels": ["improvement", "deterioration"],
+      "answers": {
+        "trajectory_shape": "single_trough",
+        "turning_regions": "trough:T2",
+        "most_severe_visit_or_plateau": "no_identifiable_most_severe_visit_or_plateau",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    },
+    {
+      "change_labels": ["improvement", "unchanged"],
+      "answers": {
+        "trajectory_shape": "monotonic_improvement",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    },
+    {
+      "change_labels": ["improvement", "improvement"],
+      "answers": {
+        "trajectory_shape": "monotonic_improvement",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    },
+    {
+      "change_labels": ["deterioration", "deterioration", "deterioration"],
+      "answers": {
+        "trajectory_shape": "monotonic_worsening",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T4",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["deterioration", "deterioration", "unchanged"],
+      "answers": {
+        "trajectory_shape": "monotonic_worsening",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T3-T4",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["deterioration", "deterioration", "improvement"],
+      "answers": {
+        "trajectory_shape": "single_peak",
+        "turning_regions": "peak:T3",
+        "most_severe_visit_or_plateau": "T3",
+        "first_improvement_between_visits": "T3-T4"
+      }
+    },
+    {
+      "change_labels": ["deterioration", "unchanged", "deterioration"],
+      "answers": {
+        "trajectory_shape": "monotonic_worsening",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T4",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["deterioration", "unchanged", "unchanged"],
+      "answers": {
+        "trajectory_shape": "monotonic_worsening",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T2-T4",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["deterioration", "unchanged", "improvement"],
+      "answers": {
+        "trajectory_shape": "single_peak",
+        "turning_regions": "peak:T2-T3",
+        "most_severe_visit_or_plateau": "T2-T3",
+        "first_improvement_between_visits": "T3-T4"
+      }
+    },
+    {
+      "change_labels": ["deterioration", "improvement", "deterioration"],
+      "answers": {
+        "trajectory_shape": "fluctuating",
+        "turning_regions": "peak:T2,trough:T3",
+        "most_severe_visit_or_plateau": "no_identifiable_most_severe_visit_or_plateau",
+        "first_improvement_between_visits": "T2-T3"
+      }
+    },
+    {
+      "change_labels": ["deterioration", "improvement", "unchanged"],
+      "answers": {
+        "trajectory_shape": "single_peak",
+        "turning_regions": "peak:T2",
+        "most_severe_visit_or_plateau": "T2",
+        "first_improvement_between_visits": "T2-T3"
+      }
+    },
+    {
+      "change_labels": ["deterioration", "improvement", "improvement"],
+      "answers": {
+        "trajectory_shape": "single_peak",
+        "turning_regions": "peak:T2",
+        "most_severe_visit_or_plateau": "T2",
+        "first_improvement_between_visits": "T2-T3"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "deterioration", "deterioration"],
+      "answers": {
+        "trajectory_shape": "monotonic_worsening",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T4",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "deterioration", "unchanged"],
+      "answers": {
+        "trajectory_shape": "monotonic_worsening",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T3-T4",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "deterioration", "improvement"],
+      "answers": {
+        "trajectory_shape": "single_peak",
+        "turning_regions": "peak:T3",
+        "most_severe_visit_or_plateau": "T3",
+        "first_improvement_between_visits": "T3-T4"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "unchanged", "deterioration"],
+      "answers": {
+        "trajectory_shape": "monotonic_worsening",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T4",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "unchanged", "unchanged"],
+      "answers": {
+        "trajectory_shape": "constant",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1-T4",
+        "first_improvement_between_visits": "none"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "unchanged", "improvement"],
+      "answers": {
+        "trajectory_shape": "monotonic_improvement",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1-T3",
+        "first_improvement_between_visits": "T3-T4"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "improvement", "deterioration"],
+      "answers": {
+        "trajectory_shape": "single_trough",
+        "turning_regions": "trough:T3",
+        "most_severe_visit_or_plateau": "no_identifiable_most_severe_visit_or_plateau",
+        "first_improvement_between_visits": "T2-T3"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "improvement", "unchanged"],
+      "answers": {
+        "trajectory_shape": "monotonic_improvement",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1-T2",
+        "first_improvement_between_visits": "T2-T3"
+      }
+    },
+    {
+      "change_labels": ["unchanged", "improvement", "improvement"],
+      "answers": {
+        "trajectory_shape": "monotonic_improvement",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1-T2",
+        "first_improvement_between_visits": "T2-T3"
+      }
+    },
+    {
+      "change_labels": ["improvement", "deterioration", "deterioration"],
+      "answers": {
+        "trajectory_shape": "single_trough",
+        "turning_regions": "trough:T2",
+        "most_severe_visit_or_plateau": "no_identifiable_most_severe_visit_or_plateau",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    },
+    {
+      "change_labels": ["improvement", "deterioration", "unchanged"],
+      "answers": {
+        "trajectory_shape": "single_trough",
+        "turning_regions": "trough:T2",
+        "most_severe_visit_or_plateau": "no_identifiable_most_severe_visit_or_plateau",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    },
+    {
+      "change_labels": ["improvement", "deterioration", "improvement"],
+      "answers": {
+        "trajectory_shape": "fluctuating",
+        "turning_regions": "trough:T2,peak:T3",
+        "most_severe_visit_or_plateau": "no_identifiable_most_severe_visit_or_plateau",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    },
+    {
+      "change_labels": ["improvement", "unchanged", "deterioration"],
+      "answers": {
+        "trajectory_shape": "single_trough",
+        "turning_regions": "trough:T2-T3",
+        "most_severe_visit_or_plateau": "no_identifiable_most_severe_visit_or_plateau",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    },
+    {
+      "change_labels": ["improvement", "unchanged", "unchanged"],
+      "answers": {
+        "trajectory_shape": "monotonic_improvement",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    },
+    {
+      "change_labels": ["improvement", "unchanged", "improvement"],
+      "answers": {
+        "trajectory_shape": "monotonic_improvement",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    },
+    {
+      "change_labels": ["improvement", "improvement", "deterioration"],
+      "answers": {
+        "trajectory_shape": "single_trough",
+        "turning_regions": "trough:T3",
+        "most_severe_visit_or_plateau": "no_identifiable_most_severe_visit_or_plateau",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    },
+    {
+      "change_labels": ["improvement", "improvement", "unchanged"],
+      "answers": {
+        "trajectory_shape": "monotonic_improvement",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    },
+    {
+      "change_labels": ["improvement", "improvement", "improvement"],
+      "answers": {
+        "trajectory_shape": "monotonic_improvement",
+        "turning_regions": "none",
+        "most_severe_visit_or_plateau": "T1",
+        "first_improvement_between_visits": "T1-T2"
+      }
+    }
+  ]
+}

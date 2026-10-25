@@ -1,0 +1,6 @@
+{
+  "run_name": "endpoint-smoke-001",
+  "model": "<exact advertised model identifier>",
+  "base_url": "https://<endpoint-hostname>/v1",
+  "benchmark_path": "artifacts/temporal_reasoning_single_finding/benchmarks/smoke_v1/manifest.json"
+}

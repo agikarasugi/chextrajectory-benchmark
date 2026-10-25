@@ -1,0 +1,8 @@
+{
+  "volume_prefix": "temporal-single",
+  "secret_name": "chextemporal-endpoint-auth",
+  "cpu": 2,
+  "memory": 8192,
+  "timeout": 21600,
+  "startup_timeout": 600
+}

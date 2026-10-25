@@ -1,0 +1,21 @@
+{
+  "First Improvement Between Visits: 3TP SEQ-DIR": "3f12f93333c011483fdb58ebc113508e08aca19720deff2cc0031682dfa5f448",
+  "First Improvement Between Visits: 3TP shared LC": "1ebbc59752ef2548a9d324d17c05946c363ac321957aefec51209b6ebeef1723",
+  "First Improvement Between Visits: 4TP SEQ-DIR": "189d0c9629e95be48d560a89d677d093442fe65c2ac035589e832a50ef9a72cd",
+  "First Improvement Between Visits: 4TP shared LC": "d03d973e137cd59f0fdc9a89e4743861348cf834c5e1d652766cc9099b7f63da",
+  "Most Severe Visit or Plateau: 3TP SEQ-DIR": "b0a08be3bd292c5aeb9e1de19a44553269eda654b2b1d1895953752322b23561",
+  "Most Severe Visit or Plateau: 3TP shared LC": "8054cec2b0477048c1d1152b17af1ed0b68001ae4e1d6d1e4d2616cb2cad049b",
+  "Most Severe Visit or Plateau: 4TP SEQ-DIR": "605edfba429a58b7cf35de7a723fbef81ed1f7605d15b968338648fdc5eae190",
+  "Most Severe Visit or Plateau: 4TP shared LC": "58c21ce39b8bc3494aecea446cb0ddb8d9de4ff5a7f4f756b549026fc158e03d",
+  "PAIR change-label prompt": "c6bb9b38f4453da31af05aeddbdb921d63d20fcde453405ceb66205f11b46a64",
+  "SEQ change-label prompt: 3TP": "a30e1f6fbc1da9bbc067f56558b0ffecd46e2ff3c450acfe772ea92d1e20ca90",
+  "SEQ change-label prompt: 4TP": "cca4225529debaa79228692a40d3a27156309140fb45fa551c78b898bc7d00df",
+  "Trajectory Shape: 3TP SEQ-DIR": "54f13b8f3f0a45e8dbb6cbd0a8894955c158251b841ce2f6bf683e817a5128ee",
+  "Trajectory Shape: 3TP shared LC": "b5f5ab33190475c1f4bf4cacc2af0e780edc78c788d50b63a64b918e84467d17",
+  "Trajectory Shape: 4TP SEQ-DIR": "c07aa6d922d8658c8c3f5cacd6db77683c3225fedc406e5b6c1a44427d43f42e",
+  "Trajectory Shape: 4TP shared LC": "1a2b7ce8d62192d0b39caa8474764d54b71b77788f9e0a43cb50e718407304c0",
+  "Turning Regions: 3TP SEQ-DIR": "d38807bc9d19c18cc0dccea3aea9fa743d3c58a1a1d7368641cae2ebbe45bb86",
+  "Turning Regions: 3TP shared LC": "4be20d4114a08ee26602b24259443e9c6fa6b70812b83756eaa79e8161567c39",
+  "Turning Regions: 4TP SEQ-DIR": "361daa1cbfdd3cb4749cbf702e6f76a9e8910d8cb39d86976c3716be1c17cd2a",
+  "Turning Regions: 4TP shared LC": "5a97b6ed17de793cfa430534b59b5c917170cab06c79d1dac8b0dfbf99d9a0b0"
+}

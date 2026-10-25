@@ -1,0 +1,6 @@
+{
+  "base_url": "http://server-address:port/v1",
+  "benchmark_path": "artifacts/temporal_reasoning_single_finding/benchmarks/gold_pilot_v1/manifest.json",
+  "model": "exact-model-identifier",
+  "run_name": "chextrajectory-model-gold-pilot-001"
+}

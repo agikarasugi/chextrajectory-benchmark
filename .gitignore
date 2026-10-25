@@ -1,0 +1,37 @@
+# Private inputs, generated benchmarks, responses, and local settings.
+/data/
+/artifacts/
+/results/
+/output/
+/tmp/
+/config/
+.env
+.env.*
+*.pem
+*.key
+*.parquet
+*.arrow
+*.feather
+*.csv
+*.tsv
+*.jsonl
+*.png
+*.jpg
+*.jpeg
+*.dcm
+*.dicom
+*.zip
+*.tar
+*.gz
+*.pdf
+*.pt
+*.pth
+*.safetensors
+
+# Local environments and caches.
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store

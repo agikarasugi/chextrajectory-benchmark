@@ -1,0 +1,335 @@
+{
+  "metadata": {
+    "schema_version": "1",
+    "evaluator_version": "1.0.0",
+    "run_name": "illustrative-two-trajectory-run",
+    "benchmark_version": "illustrative-two-trajectory-benchmark-v1",
+    "dataset": "chexpert_plus",
+    "cohorts": ["3tp_silver"]
+  },
+  "direct_failure_rates": {
+    "PAIR": {
+      "submitted_logical_calls": 4,
+      "invalid_response": { "count": 1, "rate": 0.25 },
+      "technical_failure": { "count": 0, "rate": 0 }
+    },
+    "SEQ": {
+      "submitted_logical_calls": 2,
+      "invalid_response": { "count": 0, "rate": 0 },
+      "technical_failure": { "count": 0, "rate": 0 }
+    },
+    "SEQ-DIR": {
+      "submitted_logical_calls": 8,
+      "invalid_response": { "count": 1, "rate": 0.125 },
+      "technical_failure": { "count": 1, "rate": 0.125 }
+    },
+    "REF-LC": {
+      "submitted_logical_calls": 8,
+      "invalid_response": { "count": 0, "rate": 0 },
+      "technical_failure": { "count": 0, "rate": 0 }
+    },
+    "PAIR-LC": {
+      "submitted_logical_calls": 4,
+      "invalid_response": { "count": 1, "rate": 0.25 },
+      "technical_failure": { "count": 0, "rate": 0 }
+    },
+    "SEQ-LC": {
+      "submitted_logical_calls": 7,
+      "invalid_response": { "count": 0, "rate": 0 },
+      "technical_failure": { "count": 1, "rate": 0.14285714285714285 }
+    }
+  },
+  "cohorts": {
+    "3tp_silver": {
+      "population": {
+        "patients": 2,
+        "trajectories": 2,
+        "interval_positions": 4,
+        "target_findings": {
+          "edema": { "trajectories": 1, "proportion": 0.5 },
+          "pleural_effusion": { "trajectories": 1, "proportion": 0.5 }
+        },
+        "reference_change_labels": {
+          "deterioration": { "interval_positions": 1, "proportion": 0.25 },
+          "unchanged": { "interval_positions": 2, "proportion": 0.5 },
+          "improvement": { "interval_positions": 1, "proportion": 0.25 }
+        }
+      },
+      "change_label_metrics": {
+        "PAIR": {
+          "interval_accuracy": { "correct": 3, "total": 4, "value": 0.75 },
+          "whole_trajectory_accuracy": { "correct": 1, "total": 2, "value": 0.5 },
+          "per_class": {
+            "deterioration": {
+              "counts": { "true_positives": 1, "false_positives": 0, "false_negatives": 0 },
+              "metrics": { "precision": 1, "recall": 1, "f1": 1 }
+            },
+            "unchanged": {
+              "counts": { "true_positives": 1, "false_positives": 0, "false_negatives": 1 },
+              "metrics": { "precision": 1, "recall": 0.5, "f1": 0.6666666666666666 }
+            },
+            "improvement": {
+              "counts": { "true_positives": 1, "false_positives": 0, "false_negatives": 0 },
+              "metrics": { "precision": 1, "recall": 1, "f1": 1 }
+            }
+          },
+          "interval_error_counts": {
+            "0": { "trajectories": 1, "proportion": 0.5 },
+            "1": { "trajectories": 1, "proportion": 0.5 },
+            "2": { "trajectories": 0, "proportion": 0 }
+          }
+        },
+        "SEQ": {
+          "interval_accuracy": { "correct": 2, "total": 4, "value": 0.5 },
+          "whole_trajectory_accuracy": { "correct": 1, "total": 2, "value": 0.5 },
+          "per_class": {
+            "deterioration": {
+              "counts": { "true_positives": 0, "false_positives": 1, "false_negatives": 1 },
+              "metrics": { "precision": 0, "recall": 0, "f1": 0 }
+            },
+            "unchanged": {
+              "counts": { "true_positives": 2, "false_positives": 0, "false_negatives": 0 },
+              "metrics": { "precision": 1, "recall": 1, "f1": 1 }
+            },
+            "improvement": {
+              "counts": { "true_positives": 0, "false_positives": 1, "false_negatives": 1 },
+              "metrics": { "precision": 0, "recall": 0, "f1": 0 }
+            }
+          },
+          "interval_error_counts": {
+            "0": { "trajectories": 1, "proportion": 0.5 },
+            "1": { "trajectories": 0, "proportion": 0 },
+            "2": { "trajectories": 1, "proportion": 0.5 }
+          }
+        }
+      },
+      "tasks": {
+        "trajectory_shape": {
+          "population": {
+            "eligible_questions": 2,
+            "excluded_questions": 0,
+            "reference_answers": {
+              "constant": { "questions": 1, "proportion": 0.5 },
+              "monotonic_worsening": { "questions": 0, "proportion": 0 },
+              "monotonic_improvement": { "questions": 0, "proportion": 0 },
+              "single_peak": { "questions": 1, "proportion": 0.5 },
+              "single_trough": { "questions": 0, "proportion": 0 }
+            }
+          },
+          "settings": {
+            "SEQ-DIR": {
+              "final_answer_accuracy": { "correct": 2, "total": 2, "accuracy": 1 }
+            },
+            "PAIR-FC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 1, "rate": 0.5 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "REF-LC": {
+              "final_answer_accuracy": { "correct": 2, "total": 2, "accuracy": 1 }
+            },
+            "SEQ-FC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 0, "rate": 0 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "PAIR-LC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 1, "rate": 0.5 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "SEQ-LC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 0, "rate": 0 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            }
+          },
+          "rule_based_answer_agreement": {
+            "PAIR-LC vs PAIR-FC": { "agreements": 1, "total": 1, "excluded": 1, "agreement_rate": 1 },
+            "SEQ-LC vs SEQ-FC": { "agreements": 2, "total": 2, "excluded": 0, "agreement_rate": 1 }
+          }
+        },
+        "turning_regions": {
+          "population": {
+            "eligible_questions": 2,
+            "excluded_questions": 0,
+            "reference_answers": {
+              "none": { "questions": 1, "proportion": 0.5 },
+              "peak:T2": { "questions": 1, "proportion": 0.5 },
+              "trough:T2": { "questions": 0, "proportion": 0 }
+            }
+          },
+          "settings": {
+            "SEQ-DIR": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 }
+            },
+            "PAIR-FC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 1, "rate": 0.5 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "REF-LC": {
+              "final_answer_accuracy": { "correct": 2, "total": 2, "accuracy": 1 }
+            },
+            "SEQ-FC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 0, "rate": 0 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "PAIR-LC": {
+              "final_answer_accuracy": { "correct": 0, "total": 2, "accuracy": 0 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 1, "rate": 0.5 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "SEQ-LC": {
+              "final_answer_accuracy": { "correct": 0, "total": 2, "accuracy": 0 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 0, "rate": 0 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            }
+          },
+          "rule_based_answer_agreement": {
+            "PAIR-LC vs PAIR-FC": { "agreements": 0, "total": 1, "excluded": 1, "agreement_rate": 0 },
+            "SEQ-LC vs SEQ-FC": { "agreements": 1, "total": 2, "excluded": 0, "agreement_rate": 0.5 }
+          }
+        },
+        "most_severe_visit_or_plateau": {
+          "population": {
+            "eligible_questions": 2,
+            "excluded_questions": 0,
+            "reference_answers": {
+              "T1": { "questions": 0, "proportion": 0 },
+              "T1-T2": { "questions": 0, "proportion": 0 },
+              "T1-T3": { "questions": 1, "proportion": 0.5 },
+              "T2": { "questions": 1, "proportion": 0.5 },
+              "T2-T3": { "questions": 0, "proportion": 0 },
+              "T3": { "questions": 0, "proportion": 0 }
+            }
+          },
+          "settings": {
+            "SEQ-DIR": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 }
+            },
+            "PAIR-FC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 1, "rate": 0.5 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "REF-LC": {
+              "final_answer_accuracy": { "correct": 2, "total": 2, "accuracy": 1 }
+            },
+            "SEQ-FC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 1, "rate": 0.5 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "PAIR-LC": {
+              "final_answer_accuracy": { "correct": 0, "total": 2, "accuracy": 0 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 1, "rate": 0.5 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "SEQ-LC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 1, "rate": 0.5 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            }
+          },
+          "rule_based_answer_agreement": {
+            "PAIR-LC vs PAIR-FC": { "agreements": 0, "total": 1, "excluded": 1, "agreement_rate": 0 },
+            "SEQ-LC vs SEQ-FC": { "agreements": 1, "total": 1, "excluded": 1, "agreement_rate": 1 }
+          }
+        },
+        "first_improvement_between_visits": {
+          "population": {
+            "eligible_questions": 2,
+            "excluded_questions": 0,
+            "reference_answers": {
+              "T1-T2": { "questions": 0, "proportion": 0 },
+              "T2-T3": { "questions": 1, "proportion": 0.5 },
+              "none": { "questions": 1, "proportion": 0.5 }
+            }
+          },
+          "settings": {
+            "SEQ-DIR": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 }
+            },
+            "PAIR-FC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 1, "rate": 0.5 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "REF-LC": {
+              "final_answer_accuracy": { "correct": 2, "total": 2, "accuracy": 1 }
+            },
+            "SEQ-FC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 0, "rate": 0 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "PAIR-LC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 1, "rate": 0.5 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            },
+            "SEQ-LC": {
+              "final_answer_accuracy": { "correct": 1, "total": 2, "accuracy": 0.5 },
+              "downstream_failure_rates": {
+                "eligible_questions": 2,
+                "invalid_response": { "count": 0, "rate": 0 },
+                "technical_failure": { "count": 0, "rate": 0 }
+              }
+            }
+          },
+          "rule_based_answer_agreement": {
+            "PAIR-LC vs PAIR-FC": { "agreements": 1, "total": 1, "excluded": 1, "agreement_rate": 1 },
+            "SEQ-LC vs SEQ-FC": { "agreements": 2, "total": 2, "excluded": 0, "agreement_rate": 1 }
+          }
+        }
+      }
+    }
+  }
+}

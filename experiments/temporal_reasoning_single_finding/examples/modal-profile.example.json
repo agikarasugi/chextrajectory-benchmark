@@ -1,0 +1,8 @@
+{
+  "image": "vllm/vllm-openai:v0.21.0",
+  "gpu": "H100",
+  "timeout": 86400,
+  "startup_timeout": 900,
+  "commit_interval": 60,
+  "volume_prefix": "temporal-single"
+}

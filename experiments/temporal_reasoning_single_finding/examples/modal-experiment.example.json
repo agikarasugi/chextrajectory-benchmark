@@ -1,0 +1,6 @@
+{
+  "run_name": "modal-model-smoke-001",
+  "model": "experiment-model",
+  "base_url": "http://127.0.0.1:8000/v1",
+  "benchmark_path": "artifacts/temporal_reasoning_single_finding/benchmarks/smoke_v1/manifest.json"
+}

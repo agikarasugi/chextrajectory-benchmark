@@ -1,0 +1,19 @@
+[project]
+name = "chextrajectory-benchmark"
+version = "0.1.0"
+description = "Single-finding longitudinal chest radiograph reasoning benchmark"
+requires-python = ">=3.11"
+dependencies = [
+    "huggingface-hub>=0.33,<2",
+    "openai>=2,<3",
+    "pandas>=2.3,<3",
+    "pyarrow>=20,<24",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+modal = [
+    "modal==1.5.5",
+]

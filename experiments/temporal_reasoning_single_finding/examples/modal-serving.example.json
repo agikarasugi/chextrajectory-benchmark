@@ -1,0 +1,10 @@
+{
+  "model_path": "/models/checkpoints/my-model/revision-001",
+  "served_model_name": "experiment-model",
+  "vllm_args": [
+    "--max-model-len", "16384",
+    "--gpu-memory-utilization", "0.9",
+    "--tensor-parallel-size", "1",
+    "--limit-mm-per-prompt", "{\"image\": 4}"
+  ]
+}
